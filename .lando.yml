@@ -1,0 +1,39 @@
+name: alleged_avarice
+recipe: laravel
+config:
+  webroot: app/public
+  cache: redis
+  php: '8.1'
+services:
+  appserver:
+    composer_version: 2-latest
+    build_as_root:
+      - curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+      - apt-get install -y nodejs
+    build:
+      - composer create-project --prefer-dist laravel/laravel app
+    run:
+      - cp -r /app/.environment/env /app/app/.env
+plugins:
+  "@lando/laravel/": ./../../
+tooling:
+  composer:
+    service: appserver
+    cmd: /usr/local/bin/composer
+    dir: /app/app
+  artisan:
+    service: appserver
+    cmd: php artisan
+    dir: /app/app
+  webpack:
+    service: appserver
+    cmd: webpack
+    dir: /app/app
+  node:
+    service: appserver
+    dir: /app/app
+  npm:
+    service: appserver
+    dir: /app/app
+
+
