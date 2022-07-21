@@ -1,8 +1,8 @@
 # allegedavarice
 
-A quick template to get you started in Laravel using Lando as your dev environment.
+A quick template to get you started in Wordpress using Lando as your dev environment.
 
-This is an improvement on the internal lando recipe, and includes php 8.1, the latest laravel, Node and NPM.
+This is an improvement on the internal lando recipe, and includes php 8.1, and the latest Wordpress.
 
 ## Prerequisites
 
@@ -20,21 +20,19 @@ name: alleged_avarice
 ```
 with whatever you want to name your app.
 
-In the `.environment/` file, replace:
+In the `.environment/env` file, replace:
 ```
-APP_NAME=Laravel
+APP_NAME=Wordpress
 ```
-with whatever you want to call it.  Then replace:
-```
-APP_URL=http://alleged_avarice.lndo.site/
-```
-with whatever you chose for your name in the .lando.yml file following the same pattern.
+with whatever you want to call it.
+
+In the `.environment/wp-config.php` file, replace the block of authentication keys and salts with a new block. You can generate these by visiting `https://api.wordpress.org/secret-key/1.1/salt/`
 
 Then just run
 
 `lando start`
 
-That will get you up and running.  Your new application is in the `./app` folder.
+That will get you up and running.  Your new application is in the `./wordpress` folder.
 
 ## Tooling
 
