@@ -1,7 +1,0 @@
-APP_NAME=wordpress
-APP_ENV=local
-DB_HOST=database
-DB_PORT=3306
-DB_DATABASE=wordpress
-DB_USERNAME=wordpress
-DB_PASSWORD=wordpress

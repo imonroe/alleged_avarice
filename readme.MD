@@ -2,7 +2,7 @@
 
 A quick template to get you started in Wordpress using Lando as your dev environment.
 
-This is an improvement on the internal lando recipe, and includes php 8.1, and the latest Wordpress.
+This is an improvement on the internal lando recipe, and includes php 8.1, and the latest Wordpress, along with composer support if you want it.
 
 ## Prerequisites
 
