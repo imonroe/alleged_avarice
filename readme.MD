@@ -32,7 +32,10 @@ Then just run
 
 `lando start`
 
-That will get you up and running.  Your new application is in the `./wordpress` folder.
+That will get you up and running.
+
+You should be good to go.  if you want to install additional stuff with composer, you can modify the composer.json file in the environment folder, and do a `lando rebuild; lando composer update`
+
 
 ## Tooling
 

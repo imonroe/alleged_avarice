@@ -1,1 +1,6 @@
-./wordpress/wp-content/vendor/*
+wordpress/environment
+wordpress/wp-admin
+wordpress/wp-includes
+wordpress/*.*
+wordpress/.*.*
+wordpress/wp-content/vendor/

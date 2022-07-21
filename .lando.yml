@@ -21,6 +21,7 @@ services:
         - DB_USERNAME=wordpress
         - DB_PASSWORD=wordpress
     run:
+      - wp core download --path=/app/wordpress
       - cp -r /app/wordpress/environment/wp-config.php /app/wordpress/wp-config.php
       - cp -r /app/wordpress/environment/composer.json /app/wordpress/composer.json
 tooling:
